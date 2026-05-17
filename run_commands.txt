@@ -1,0 +1,50 @@
+PROJECT SETUP (Football App)
+
+---------------------------
+BACKEND (Terminal 1)
+---------------------------
+
+cd backend
+
+python -m venv venv
+
+# Activate virtual environment
+# Windows (PowerShell):
+venv\Scripts\Activate
+
+# Mac/Linux:
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+# Optional (for GPU - CUDA)
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# Set Flask app (if needed)
+set FLASK_APP=app.py        (Windows)
+export FLASK_APP=app.py     (Mac/Linux)
+
+
+flask run
+
+
+
+
+
+---------------------------
+FRONTEND (Terminal 2)
+---------------------------
+
+cd frontend
+
+npm install
+
+npm run dev
+
+
+---------------------------
+NOTES
+---------------------------
+- Run backend and frontend in separate terminals
+- Make sure Python and Node.js are installed
+- CUDA step is optional (only for NVIDIA GPU users)
